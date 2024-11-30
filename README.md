@@ -1,81 +1,118 @@
-# Write a Book Flow
+# Gerador de Ebooks com IA
 
-Welcome to the Book Writing Flow, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Um gerador de ebooks automatizado usando Inteligência Artificial e CrewAI.
 
-## Overview
+## 📚 Sobre o Projeto
 
-This flow will guide you through the process of writing a book by leveraging multiple AI agents, each with specific roles. Here's a brief overview of what will happen in this flow:
+Este projeto utiliza IA para gerar ebooks completos de forma automatizada. Ele usa o conceito de "crews" (equipes) do CrewAI, onde diferentes agentes de IA trabalham juntos para criar um livro completo:
 
-1. **Generate Book Outline**: The flow starts by using the `OutlineCrew` to create a comprehensive outline for your book. This crew will search the internet, define the structure, and main topics of the book based on the provided goal and topic.
+- **Outline Crew**: Responsável por gerar a estrutura e o sumário do livro
+- **Write Crew**: Responsável por escrever os capítulos
+- **Review Crew**: Responsável por revisar e melhorar o conteúdo
 
-2. **Write Book Chapters**: Once the outline is ready, the flow will kick off a new crew, `WriteBookChapterCrew`, for each chapter outlined in the previous step. Each crew will be responsible for writing a specific chapter, ensuring that the content is detailed and coherent.
+## 🚀 Funcionalidades
 
-3. **Join and Save Chapters**: In the final step, the flow will combine all the chapters into a single markdown file, creating a complete book. This file will be saved in the root folder of your project.
+- Geração automática de estrutura do livro
+- Escrita de capítulos com GPT-4
+- Revisão e melhoria automática do conteúdo
+- Exportação para PDF e Markdown
+- Suporte a múltiplos idiomas (pt-BR e en-US)
+- Processamento paralelo de capítulos
 
-By following this flow, you can efficiently produce a well-structured and comprehensive book, leveraging the power of multiple AI agents to handle different aspects of the writing process.
+## 🛠️ Tecnologias Utilizadas
 
-## Installation
+- Python 3.10+
+- CrewAI
+- OpenAI GPT-4
+- Langchain
+- WeasyPrint (para geração de PDF)
+- Pydantic (para configurações)
 
-Ensure you have Python >=3.10 <=3.13 installed on your system. This project uses [Poetry](https://python-poetry.org/) for dependency management and package handling, offering a seamless setup and execution experience.
+## 📋 Pré-requisitos
 
-First, if you haven't already, install Poetry:
+- Python 3.10 ou superior
+- Pip (gerenciador de pacotes Python)
+- Chave de API da OpenAI
+- Chave de API do Serper (para pesquisas)
 
+## 🔧 Instalação
+
+1. Clone o repositório:
 ```bash
-pip install poetry
+git clone https://github.com/lausantosdev/gerador-ebook-crewai-new.git
+cd gerador-ebook-crewai-new
 ```
 
-Next, navigate to your project directory and install the dependencies:
-
-1. First lock the dependencies and then install them:
-
+2. Crie e ative um ambiente virtual:
 ```bash
-crewai install
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
 ```
 
-### Customizing & Dependencies
-
-**Add your `OPENAI_API_KEY` into the `.env` file**  
-**Add your `SERPER_API_KEY` into the `.env` file**
-
-To customize the behavior of the book writing flow, you can update the agents and tasks defined in the `OutlineCrew` and `WriteBookChapterCrew`. If you want to adjust the flow itself, you will need to modify the flow in `main.py`.
-
-- **Agents and Tasks**: Modify `src/write_a_book_with_flows/config/agents.yaml` to define your agents and `src/write_a_book_with_flows/config/tasks.yaml` to define your tasks. This is where you can customize how the book outline is generated and how chapters are written.
-
-- **Flow Adjustments**: Modify `src/write_a_book_with_flows/main.py` to adjust the flow. This is where you can change how the flow orchestrates the different crews and tasks.
-
-## Running the Project
-
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
-
+3. Instale as dependências:
 ```bash
-crewai run
+pip install -r requirements.txt
 ```
 
-This command initializes the write_a_book_with_flows Crew, assembling the agents and assigning them tasks as defined in your configuration.
+4. Configure as variáveis de ambiente:
+Crie um arquivo `.env` na raiz do projeto com:
+```env
+OPENAI_API_KEY=sua_chave_api_openai
+SERPER_API_KEY=sua_chave_api_serper
+DEFAULT_LANGUAGE=pt-BR
+MODEL_NAME=gpt-4o
+```
 
-When you kickstart the flow, it will orchestrate multiple crews to perform the tasks. The flow will first generate a book outline, then create and run a crew for each chapter, and finally join all the chapters into a single markdown file.
+## 🚀 Uso
 
-## Understanding Your Flow
+1. Execute o script principal:
+```bash
+python run.py
+```
 
-The write_a_book_with_flows Flow is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your flow.
+2. O script irá:
+   - Gerar a estrutura do livro
+   - Escrever os capítulos
+   - Revisar o conteúdo
+   - Gerar o arquivo final em PDF
 
-### Flow Structure
+## 📁 Estrutura do Projeto
 
-1. **OutlineCrew**: This crew is responsible for generating the book outline. It defines the structure and main topics of the book based on the provided goal and topic.
+```
+src/
+├── agents/         # Agentes de IA
+├── core/          # Configurações e funcionalidades principais
+├── crews/         # Implementação das crews
+├── models/        # Modelos de dados
+├── services/      # Serviços do livro
+└── interfaces/    # Interfaces e abstrações
 
-2. **WriteBookChapterCrew**: For each chapter outlined by the `OutlineCrew`, a new `WriteBookChapterCrew` is created. Each of these crews is responsible for writing a specific chapter, ensuring detailed and coherent content.
+tests/             # Testes automatizados
+├── unit/         # Testes unitários
+├── integration/  # Testes de integração
+└── e2e/          # Testes end-to-end
+```
 
-3. **Join and Save**: After all chapters are written, the flow combines them into a single markdown file, creating a complete book.
+## 🧪 Testes
 
-By understanding the flow structure, you can see how multiple crews are orchestrated to work together, each handling a specific part of the book writing process. This modular approach allows for efficient and scalable book production.
+Execute os testes com:
+```bash
+pytest
+```
 
-## Support
+## 📄 Licença
 
-For support, questions, or feedback regarding the {{crew_name}} Crew or crewAI.
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
+## ✨ Contribuição
 
-Let's create wonders together with the power and simplicity of crewAI.
+1. Faça um Fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 🤝 Suporte
+
+Se você encontrar algum problema ou tiver sugestões, por favor abra uma issue no GitHub.
