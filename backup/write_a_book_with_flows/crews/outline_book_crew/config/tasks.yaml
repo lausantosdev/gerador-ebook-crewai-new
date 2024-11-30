@@ -1,0 +1,50 @@
+research_topic:
+  description: >
+    Research the topic: {topic}
+    
+    Consider:
+    - Target audience: {target_audience}
+    - Book type: {book_type}
+    - Goal: {goal}
+    
+    Focus on finding:
+    1. Deep psychological understanding of {topic}
+    2. Evidence-based methodologies for {topic}
+    3. Expert insights and professional techniques
+    4. Case studies and success stories
+    5. Latest research findings about {topic}
+    
+    IMPORTANT: 
+    - Stay STRICTLY focused on {topic}
+    - Each research point should have extensive detail
+    - Find multiple expert perspectives for each aspect
+    - When using the search tool, use English keywords for better results,
+      but keep in mind the final content will be in Portuguese.
+
+generate_outline:
+  description: >
+    Create a detailed book outline for a {book_type} about {topic}.
+    
+    Target audience: {target_audience}
+    Book goal: {goal}
+    
+    Structure Requirements:
+    1. Create EXACTLY 5 chapters that STRICTLY follow this progression for {topic}:
+       - Chapter 1: Understanding {topic} (foundations and psychology)
+       - Chapter 2: Core strategies to overcome {topic}
+       - Chapter 3: Advanced techniques for mastering {topic}
+       - Chapter 4: Practical exercises and real-world applications for {topic}
+       - Chapter 5: Long-term success and maintenance strategies for {topic}
+    
+    Each chapter MUST:
+    - Have a title that DIRECTLY relates to {topic}
+    - Include 3-4 relevant subtopics
+    - Have clear learning objectives
+    - End with practical exercises
+    
+    IMPORTANT:
+    - Every chapter title must explicitly mention or relate to {topic}
+    - No generic titles or tangential subjects
+    - Maintain clear progression from basic to advanced concepts
+    - Focus exclusively on {topic}
+  agent: outliner

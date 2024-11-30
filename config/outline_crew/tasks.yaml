@@ -1,0 +1,35 @@
+research:
+  description: >
+    Research the topic "{topic}" thoroughly.
+    Consider the target audience: {target_audience}
+    And the goal: {goal}
+    Book type: {book_type}
+    Language: {language}
+    
+    Your task is to:
+    1. Research the main concepts and topics that should be covered
+    2. Identify best practices and common approaches
+    3. Analyze similar books and their structure
+    4. Consider the target audience's needs and expectations
+    
+    Provide a comprehensive research report that will help create an effective book outline.
+  agent: researcher
+  expected_output: Research findings
+
+write:
+  description: >
+    Create a detailed book outline for a {book_type} about "{topic}".
+    Target audience: {target_audience}
+    Goal: {goal}
+    Language: {language}
+    
+    Your task is to:
+    1. Use the research provided to create a logical and engaging outline
+    2. Structure the content in a way that builds knowledge progressively
+    3. Ensure each chapter has a clear purpose and flows naturally
+    4. Include detailed descriptions for each chapter
+    5. Consider the target audience's background and learning needs
+    
+    The outline should be comprehensive yet focused on achieving the book's goal.
+  agent: writer
+  expected_output: Book outline

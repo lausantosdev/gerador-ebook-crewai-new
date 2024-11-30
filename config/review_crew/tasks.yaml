@@ -1,0 +1,53 @@
+review_chapter:
+  description: >
+    Review the chapter titled "{chapter_title}" for quality and consistency.
+    
+    Chapter Description: {chapter_description}
+    Target Audience: {target_audience}
+    Book Goal: {goal}
+    Book Type: {book_type}
+    
+    Your task is to:
+    1. Check for technical accuracy and completeness
+    2. Verify if the content matches the target audience
+    3. Ensure the writing style is consistent
+    4. Look for grammar and spelling errors
+    5. Validate markdown formatting
+    
+    IMPORTANT: All feedback must be in Portuguese (pt-BR).
+  expected_output: >
+    A detailed review report including:
+    - Overall assessment
+    - Technical accuracy review
+    - Content completeness check
+    - Writing style analysis
+    - Grammar and spelling corrections
+    - Markdown formatting validation
+  agent: reviewer
+
+improve_chapter:
+  description: >
+    Improve the chapter based on the review feedback.
+    
+    Chapter Title: {chapter_title}
+    Chapter Description: {chapter_description}
+    Target Audience: {target_audience}
+    Book Goal: {goal}
+    Book Type: {book_type}
+    
+    Your task is to:
+    1. Address all issues found in the review
+    2. Improve technical explanations
+    3. Enhance readability and flow
+    4. Fix any formatting issues
+    5. Ensure consistency with book style
+    
+    IMPORTANT: Generate all content in Portuguese (pt-BR).
+  expected_output: >
+    An improved version of the chapter that:
+    - Addresses all review feedback
+    - Has better technical explanations
+    - Is more readable and engaging
+    - Has correct formatting
+    - Is consistent with book style
+  agent: editor 

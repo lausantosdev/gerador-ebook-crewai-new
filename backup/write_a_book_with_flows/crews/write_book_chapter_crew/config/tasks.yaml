@@ -1,0 +1,24 @@
+research_chapter:
+  description: >
+    Research specific information for the chapter titled "{chapter_title}".
+    Focus on gathering detailed, practical, and scientifically-backed information about "{tema}".
+
+    IMPORTANT: When using the search tool, use English keywords to get better results.
+    Translate the chapter title and main concepts to English for searching.
+
+    Chapter Description: {chapter_description}
+
+write_chapter:
+  description: >
+    Write a well-structured chapter based on the chapter title and outline description. 
+    Each chapter should be written in markdown and should contain around 3,000 words.
+
+    Topic: {tema}
+    Chapter Title: {chapter_title}
+    Chapter Description: {chapter_description}
+
+    IMPORTANT: Generate all content in Portuguese (pt-BR).
+    Even though you receive instructions in English, all your outputs must be in Portuguese.
+  expected_output: >
+    A markdown-formatted chapter of around 3,000 words that covers the provided chapter title and outline description.
+  agent: writer

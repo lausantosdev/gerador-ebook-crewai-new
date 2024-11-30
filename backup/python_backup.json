@@ -1,0 +1,27 @@
+{
+  "output_language": "pt-BR",
+  "title": "Python para Iniciantes",
+  "topic": "Python",
+  "goal": "Ensinar programação básica",
+  "target_audience": "Iniciantes em programação",
+  "book": [
+    {
+      "title": "Capítulo Teste",
+      "content": "# Introdução ao Python\n\nPython é uma linguagem de programação versátil e amigável para iniciantes. Neste capítulo, vamos explorar:\n\n1. O que é Python\n2. Por que Python é uma excelente escolha para iniciantes\n3. História e evolução da linguagem\n4. Instalação e configuração\n5. Primeiros passos com Python\n\n## O que é Python?\n\nPython é uma linguagem de programação de alto nível, interpretada e de propósito geral. Foi criada por Guido van Rossum e lançada em 1991.\nAlgumas características que tornam Python especial:\n\n- Sintaxe clara e legível\n- Grande comunidade ativa\n- Vasta biblioteca padrão\n- Multiplataforma (Windows, Linux, Mac)\n- Gratuita e open source\n\n## Por que Python?\n\nPython é fácil de aprender e possui uma comunidade ativa que desenvolve bibliotecas para praticamente qualquer necessidade.\nAlém disso, é utilizada em diversas áreas como:\n\n1. Desenvolvimento Web\n   - Django\n   - Flask\n   - FastAPI\n\n2. Ciência de Dados\n   - Pandas\n   - NumPy\n   - Scikit-learn\n\n3. Automação\n   - Selenium\n   - PyAutoGUI\n   - Beautiful Soup\n\n4. Inteligência Artificial\n   - TensorFlow\n   - PyTorch\n   - Keras\n\n## História e Evolução\n\nPython foi criada no início dos anos 90 e desde então tem evoluído constantemente.\nHoje é uma das linguagens mais populares do mundo, usada por empresas como:\n\n- Google\n- NASA\n- Instagram\n- Spotify\n- Netflix\n\n### Versões Principais\n\n- Python 1.0 (1994)\n- Python 2.0 (2000)\n- Python 3.0 (2008)\n- Python 3.11 (Atual)\n\n## Instalação e Configuração\n\nPara começar a programar em Python, você precisa:\n\n1. Baixar o Python\n   - Acesse python.org\n   - Escolha a versão mais recente\n   - Siga o instalador\n\n2. Configurar o Ambiente\n   - IDE recomendada: VS Code\n   - Extensões úteis\n   - Terminal integrado\n\n3. Testar a Instalação\n   ```python\n   print(\"Olá, Python!\")\n   ```\n\n## Primeiros Passos\n\nVamos começar com alguns conceitos básicos:\n\n1. Variáveis\n   ```python\n   nome = \"Maria\"\n   idade = 25\n   altura = 1.65\n   ```\n\n2. Operações Básicas\n   ```python\n   soma = 10 + 5\n   multiplicacao = 3 * 4\n   divisao = 15 / 3\n   ```\n\n3. Estruturas de Controle\n   ```python\n   if idade >= 18:\n       print(\"Maior de idade\")\n   else:\n       print(\"Menor de idade\")\n   ```\n\n4. Loops\n   ```python\n   for i in range(5):\n       print(f\"Contagem: {i}\")\n   ```\n\n### Exercícios Práticos\n\n1. Crie um programa que calcule a média de três números\n2. Faça um script que converta temperatura de Celsius para Fahrenheit\n3. Desenvolva um programa que verifique se um número é par ou ímpar\n\n## Recursos Adicionais\n\n- Documentação oficial: docs.python.org\n- Tutoriais online gratuitos\n- Comunidades e fóruns\n- Livros recomendados\n\n## Próximos Passos\n\nApós dominar os conceitos básicos, você pode:\n\n1. Aprofundar em uma área específica\n2. Trabalhar em projetos pessoais\n3. Contribuir com projetos open source\n4. Participar de comunidades Python\n\nLembre-se: a prática é fundamental para o aprendizado. Dedique tempo para experimentar e criar seus próprios programas."
+    }
+  ],
+  "book_outline": [
+    {
+      "title": "Introdução ao Python",
+      "description": "Uma introdução gentil à linguagem Python, sua história e por que é excelente para iniciantes."
+    },
+    {
+      "title": "Configurando seu Ambiente",
+      "description": "Como instalar Python e configurar seu ambiente de desenvolvimento."
+    },
+    {
+      "title": "Conceitos Básicos",
+      "description": "Variáveis, tipos de dados e operações básicas em Python."
+    }
+  ]
+}
